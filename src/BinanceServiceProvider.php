@@ -1,4 +1,4 @@
-<?php namespace adman9000\binance;
+<?php namespace decode9\binance;
 
 /**
  * @author  adman9000

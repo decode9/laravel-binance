@@ -1,5 +1,5 @@
 <?php 
-namespace adman9000\binance;
+namespace decode9\binance;
 
 class BinanceAPI
 {
@@ -277,6 +277,44 @@ class BinanceAPI
         return $this->wapiRequest("v3/depositAddress.html", ['asset' => $symbol]);
         
     }
+
+    /**
+     * Deposit History
+     * @param string $symbol   Asset symbol
+     * @param int $status  Deposit Status
+     * @return mixed
+     **/
+    public function depositHistory($symbol, $status) {
+
+        return $this->wapiRequest("v3/depositHistory.html", ['asset' => $symbol, 'status' => $status]);
+        
+    }
+
+    /**
+     * Deposit History
+     * @param string $symbol   Asset symbol
+     * @param string $address  Withdrawal address
+     * @param double $amount Withdrawal Amount
+     * @return mixed
+     **/
+    public function withdrawToAddress($symbol, $address, $amount){
+
+        return $this->wapiRequest("v3/withdraw.html", ['asset' => $symbol, 'address' => $address, 'amount' => $amount]);
+
+    }
+
+    /**
+     * Withdraw History
+     * @param string $symbol   Asset symbol
+     * @param int $status  Deposit Status
+     * @return mixed
+     **/
+    public function withdrawHistory($symbol, $status) {
+
+        return $this->wapiRequest("v3/withdrawHistory.html", ['asset' => $symbol, 'status' => $status]);
+        
+    }
+
 
     //------ REQUESTS FUNCTIONS ------
 

@@ -1,5 +1,5 @@
 {
-    "name": "adman9000/laravel-binance",
+    "name": "decode9/laravel-binance",
     "description": "Implementation of Binance trading API for Laravel",
 	  "tags": ["binance", "api", "laravel"],
 	  "type": "library",
@@ -8,6 +8,10 @@
 		{
 		  "name": "Adam Harding",
 		  "email": "myaddressistaken@googlemail.com"
+    },
+    {
+		  "name": "Jorge Bastidas",
+		  "email": "thismail@mail.com"
 		}
 	  ],
    "require": {
@@ -17,16 +21,16 @@
   },
   "autoload": {
     "psr-4": {
-      "adman9000\\binance\\": "src/"
+      "decode9\\binance\\": "src/"
     }
   },
   "extra": {
     "laravel": {
         "providers": [
-            "adman9000\\binance\\BinanceServiceProvider"
+            "decode9\\binance\\BinanceServiceProvider"
         ],
         "aliases": {
-            "Binance": "adman9000\\binance\\BinanceAPIFacade"
+            "Binance": "decode9\\binance\\BinanceAPIFacade"
         }
     }
 }

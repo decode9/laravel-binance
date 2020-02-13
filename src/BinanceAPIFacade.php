@@ -1,4 +1,5 @@
-<?php namespace adman9000\binance;
+<?php 
+namespace decode9\binance;
 
 use Illuminate\Support\Facades\Facade;
 
