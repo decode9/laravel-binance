@@ -1,7 +1,7 @@
 {
     "name": "decode9/laravel-binance",
     "description": "Implementation of Binance trading API for Laravel",
-	  "tags": ["binance", "api", "laravel"],
+	  "keywords": ["binance", "api", "laravel"],
 	  "type": "library",
 	  "license": "MIT",
 	  "authors": [
@@ -21,16 +21,16 @@
   },
   "autoload": {
     "psr-4": {
-      "decode9\\binance\\": "src/"
+      "decode9\\laravel-binance\\": "src/"
     }
   },
   "extra": {
     "laravel": {
         "providers": [
-            "decode9\\binance\\BinanceServiceProvider"
+            "decode9\\laravel-binance\\BinanceServiceProvider"
         ],
         "aliases": {
-            "Binance": "decode9\\binance\\BinanceAPIFacade"
+            "Binance": "decode9\\laravel-binance\\BinanceAPIFacade"
         }
     }
 }
