@@ -91,7 +91,7 @@ class BinanceAPI
          $data = [
             'symbol' => $symbol
         ];
-        return $this->request('v1/ticker/allPrices', $data);
+        return $this->request('v3/ticker/price', $data);
     }
 
 
@@ -329,10 +329,15 @@ class BinanceAPI
      */
     private function request($url, $params = [], $method = 'GET')
     {
+       
         // Set URL & Header
         curl_setopt($this->curl, CURLOPT_URL, $this->url . $url);
         curl_setopt($this->curl, CURLOPT_HTTPHEADER, array());
 
+        if($params && $method = 'GET'){
+            $query   = http_build_query($params, '', '&');
+            curl_setopt($this->curl, CURLOPT_URL, $this->url . $url . $query);
+        }
         //Add post vars
         if($method == 'POST')
         {
