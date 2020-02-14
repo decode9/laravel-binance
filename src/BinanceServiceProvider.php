@@ -11,7 +11,7 @@ class BinanceServiceProvider extends ServiceProvider {
 	{
 		$this->publishes([
 			__DIR__.'/../config/binance.php' => config_path('binance.php')
-		], 'binance');
+		]);
 		
 	} // boot
 
