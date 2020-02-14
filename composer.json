@@ -21,16 +21,16 @@
   },
   "autoload": {
     "psr-4": {
-      "decode9\\laravel-binance\\": "src/"
+      "decode9\\binance\\": "src/"
     }
   },
   "extra": {
     "laravel": {
         "providers": [
-            "decode9\\laravel-binance\\BinanceServiceProvider"
+            "decode9\\binance\\BinanceServiceProvider"
         ],
         "aliases": {
-            "Binance": "decode9\\laravel-binance\\BinanceAPIFacade"
+            "Binance": "decode9\\binance\\BinanceAPIFacade"
         }
     }
 }
