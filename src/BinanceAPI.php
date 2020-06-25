@@ -336,7 +336,7 @@ class BinanceAPI
 
         if($params && $method = 'GET'){
             $query   = http_build_query($params, '', '&');
-            curl_setopt($this->curl, CURLOPT_URL, $this->url . $url . $query);
+            curl_setopt($this->curl, CURLOPT_URL, $this->url . $url . "?$query");
         }
         //Add post vars
         if($method == 'POST')
